@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "205585638904",
+    "project_id": "estatebridge-app1",
+    "storage_bucket": "estatebridge-app1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205585638904:android:d6b40b71e7913cc879620d",
+        "android_client_info": {
+          "package_name": "com.example.estate_bridge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCalDalH0ufG-GeNJYI_-o7dE8UWUTlGg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

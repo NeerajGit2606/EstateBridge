@@ -1,0 +1,15 @@
+99 acres wala hi rakho logic 
+user enter first time --> welcome screen 
+user close app without any action
+user open app again 
+guest mode visible
+
+
+Firebase project estatebridge-app1.
+
+Platform  Firebase App Id
+web       1:205585638904:web:7025f9ae56fc58d579620d
+android   1:205585638904:android:d6b40b71e7913cc879620d
+ios       1:205585638904:ios:20cc490490001dd579620d
+macos     1:205585638904:ios:20cc490490001dd579620d
+windows   1:205585638904:web:b5db63c197f361b679620d
