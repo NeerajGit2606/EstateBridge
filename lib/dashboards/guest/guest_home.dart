@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'widgets/guest_banner.dart';
+import 'widgets/guest_search_bar.dart';
+// import 'widgets/guest_quick_actions.dart';
+// import 'widgets/guest_insights.dart';
+import 'widgets/guest_bottom_nav.dart';
 
 /// ------------------------------------------------------------
 /// GuestHome
@@ -20,15 +25,26 @@ class GuestHome extends StatelessWidget {
               // TODO: Navigate to Login / OTP screen
             },
             child: const Text('Login'),
-          )
+          ),
         ],
       ),
-      body: const Center(
-        child: Text(
-          'Browsing as Guest',
-          style: TextStyle(fontSize: 16),
-        ),
+      body: ListView(
+        padding: const EdgeInsets.only(bottom: 80),
+        children: const [
+          /// Top promotional / branding banner
+          GuestBanner(),
+
+          /// Property search UI (read-only for guest)
+          GuestSearchBar(),
+
+          /// Buy / Rent / Insights shortcuts
+          //  GuestQuickActions(),
+
+          /// Market insights cards
+          //  GuestInsights(),
+        ],
       ),
+      bottomNavigationBar: const GuestBottomNav(),
     );
   }
 }
