@@ -13,3 +13,15 @@ android   1:205585638904:android:d6b40b71e7913cc879620d
 ios       1:205585638904:ios:20cc490490001dd579620d
 macos     1:205585638904:ios:20cc490490001dd579620d
 windows   1:205585638904:web:b5db63c197f361b679620d
+
+
+postgre sql 
+https://supabase.com/dashboard/org/cldpltjrshxrilillrly
+project name - EstateBridge
+Project ID - wndtslkcpfabriibxhwf
+password - MjRYw*z9$kPtv@2
+
+connection string - postgresql://postgres:MjRYw*z9$kPtv@2@db.wndtslkcpfabriibxhwf.supabase.co:5432/postgres
+
+
+postgresql://postgres.wndtslkcpfabriibxhwf:MjRYw*z9$kPtv@2@aws-1-ap-south-1.pooler.supabase.com:5432/postgres

@@ -36,21 +36,12 @@ class SelectedChips extends StatelessWidget {
 
         /// Create one chip per selected location
         children: selectedLocations.map((city) {
-          return InputChip(
-            /// Display city/locality name
+          return ActionChip(
+            avatar: const Icon(Icons.add, size: 16),
             label: Text(city),
-
-            /// ❌ delete handler
-            onDeleted: () {
-              /// Debug log for tracing delete action
-              debugPrint('[SelectedChips] Removed: $city');
-
-              /// Create a new list to avoid mutating original reference
-              final updatedList = List<String>.from(selectedLocations)
-                ..remove(city);
-
-              /// Notify parent (SearchScreen) to update state
-              onChanged(updatedList);
+            onPressed: () {
+              debugPrint('[SelectedChips] Chip tapped: $city');
+              onChanged([city]); // ✅ valid here
             },
           );
         }).toList(),
