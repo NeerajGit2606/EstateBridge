@@ -261,6 +261,78 @@ class _SearchScreenState extends State<SearchScreen> {
                   });
                 },
               ),
+
+            // ✅ THIS IS THE KEY FIX
+            // 🔹 EMPTY / LIST / CHIPS AREA TAKES ALL FREE SPACE
+            Expanded(
+              child: Container(), // later list / chips will come here
+            ),
+
+            // 🔹 BOTTOM BAR (ALWAYS AT BOTTOM)
+            Container(
+              height: 56,
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                border: Border(top: BorderSide(color: Colors.black12)),
+                color: Colors.white,
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // 🔹 Clear All (LEFT)
+                  GestureDetector(
+                    onTap: () {
+                      debugPrint('[BottomBar] Clear All tapped');
+                    },
+                    child: Text(
+                      'Clear All',
+                      style: TextStyle(
+                        color: Colors.blue.shade600,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+
+                  // 🔹 Next (RIGHT – auto aligned)
+                  GestureDetector(
+                    onTap: () {
+                      debugPrint('[BottomBar] Add clicked');
+                    },
+                    child: Container(
+                      height: 40,
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      decoration: BoxDecoration(
+                        color: Colors.blue.shade700, // solid blue
+                        borderRadius: BorderRadius.circular(
+                          6,
+                        ), // matches screenshot
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: const [
+                          Text(
+                            'Next',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Icon(
+                            Icons.arrow_forward,
+                            color: Colors.white,
+                            size: 18,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
